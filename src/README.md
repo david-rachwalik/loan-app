@@ -29,10 +29,6 @@ npm i @angular/flex-layout@10.0.0-beta.32
 
 ---
 
-```bash
-npm i jquery bootstrap@4.6.1 bootstrap-icons
-```
-
 Generate a new Angular component
 
 ```bash
