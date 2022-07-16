@@ -15,7 +15,7 @@ Generate a new Angular application ([RxJS](https://www.learnrxjs.io))
 ng new <project-name>
 ```
 
-Install Angular Material ("Deep Purple/Amber" theme, 'y' typography, 'y' animations)
+Install Angular Material ("custom" theme, 'y' typography, 'y' animations)
 
 ```bash
 ng add @angular/material
@@ -33,6 +33,12 @@ Generate a new Angular component
 
 ```bash
 ng g c <component-name>
+```
+
+Generate a new Angular service
+
+```bash
+ng g s <component-name>
 ```
 
 Generate a new Angular guard
