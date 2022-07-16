@@ -7,21 +7,33 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { BaseLayoutComponent } from './layouts/base-layout/base-layout.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: AboutComponent,
+    component: BaseLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: AboutComponent,
+      },
+      {
+        path: 'about',
+        component: AboutComponent,
+      },
+      {
+        path: 'contact-us',
+        component: ContactUsComponent,
+      },
+    ],
   },
   {
-    path: 'about',
-    component: AboutComponent,
-  },
-  {
-    path: 'contact-us',
-    component: ContactUsComponent,
+    path: '**',
+    component: NotFoundComponent,
   },
 ];
 
