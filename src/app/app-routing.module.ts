@@ -1,14 +1,14 @@
 /*
  * Title: app-routing.module.ts
  * Author: David Rachwalik
- * Date: 2022/07/15
+ * Date: 2022/07/16
  * Description: App routing module
  */
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
-import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BaseLayoutComponent } from './layouts/base-layout/base-layout.component';
 
@@ -26,8 +26,8 @@ const routes: Routes = [
         component: AboutComponent,
       },
       {
-        path: 'contact-us',
-        component: ContactUsComponent,
+        path: 'contact',
+        component: ContactComponent,
       },
     ],
   },

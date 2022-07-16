@@ -1,7 +1,7 @@
 /*
  * Title: app.module.ts
  * Author: David Rachwalik
- * Date: 2022/07/15
+ * Date: 2022/07/16
  * Description: App module
  */
 
@@ -16,7 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
-import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BaseLayoutComponent } from './layouts/base-layout/base-layout.component';
 
@@ -24,7 +24,7 @@ import { BaseLayoutComponent } from './layouts/base-layout/base-layout.component
   declarations: [
     AppComponent,
     AboutComponent,
-    ContactUsComponent,
+    ContactComponent,
     BaseLayoutComponent,
     NotFoundComponent,
   ],
