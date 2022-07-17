@@ -9,6 +9,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BaseLayoutComponent } from './layouts/base-layout/base-layout.component';
 
@@ -19,7 +20,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: AboutComponent,
+        component: HomeComponent,
       },
       {
         path: 'about',
