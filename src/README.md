@@ -15,7 +15,7 @@ Generate a new Angular application ([RxJS](https://www.learnrxjs.io))
 ng new <project-name>
 ```
 
-Install Angular Material ("custom" theme, 'y' typography, 'y' animations)
+Install Angular Material ("custom" theme, 'y' typography, 'y' animations) ([background](https://material.angular.io/guide/theming#application-background-color))
 
 ```bash
 ng add @angular/material
