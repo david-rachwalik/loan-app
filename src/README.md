@@ -27,6 +27,12 @@ Install [Angular Flex-Layout](https://github.com/angular/flex-layout) ([v10](htt
 npm i @angular/flex-layout@10.0.0-beta.32
 ```
 
+Install [angular-cli-ghpages](https://www.npmjs.com/package/angular-cli-ghpages) to deploy Angular app to GitHub Pages
+
+```bash
+ng add angular-cli-ghpages
+```
+
 ---
 
 Generate a new Angular component
