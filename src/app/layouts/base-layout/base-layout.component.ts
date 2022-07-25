@@ -15,9 +15,7 @@ import { Component, OnInit } from '@angular/core';
 export class BaseLayoutComponent implements OnInit {
   title: string;
 
-  constructor() {
-    this.title = 'Welcome to the Loan Application!';
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 }
