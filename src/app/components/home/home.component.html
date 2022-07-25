@@ -1,5 +1,5 @@
 <div fxLayout="column">
-    <h1 class="align-center">Welcome to the Loan Application!</h1>
+    <h1 class="align-center gold-title">Welcome to the Loan Application!</h1>
 </div>
 <br />
 
@@ -43,12 +43,12 @@
     <div fxFlex class="loan-summary">
         <mat-card class="mat-elevation-z0">
             <mat-card-content class="align-center">
-                <div>Your monthly payment:</div>
-                <div>{{ monthlyPayment | currency }}</div>
+                <div class="gold-title">Your monthly payment:</div>
+                <div class="result-lg">{{ monthlyPayment | currency }}</div>
                 <br />
 
-                <div>Interest paid:</div>
-                <div>{{ (monthlyPayment * numberOfPayments - principle) | currency }}</div>
+                <div class="gold-title">Interest paid:</div>
+                <div class="result-lg">{{ (monthlyPayment * numberOfPayments - principle) | currency }}</div>
             </mat-card-content>
         </mat-card>
     </div>
