@@ -13,7 +13,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./base-layout.component.scss'],
 })
 export class BaseLayoutComponent implements OnInit {
-  constructor() {}
+  title: string;
+
+  constructor() {
+    this.title = 'Welcome to the Loan Application!';
+  }
 
   ngOnInit(): void {}
 }
