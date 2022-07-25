@@ -1,3 +1,50 @@
-<div fxLayout="column">
-    <h1 class="align-center">Welcome to the Loan Application!</h1>
+<div fxLayout="row wrap" fxLayoutGap="20px">
+    <div fxFlex class="loan-form">
+        <mat-card class="mat-elevation-z0">
+            <mat-card-content>
+                <form fxLayout="column" [formGroup]="loanForm" (ngSubmit)="onSubmit($event)" (keydown.enter)="$event.preventDefault()">
+                    <div>Loan amount:</div>
+                    <mat-form-field fxFlex appearance="fill">
+                        <input matInput required type="text" name="loanAmount" formControlName="loanAmount" placeholder="$23,000.00" />
+                        <mat-hint align="end" *ngIf="form.loanAmount.touched && !form.loanAmount.valid">
+                            Must provide a value for the loan amount.
+                        </mat-hint>
+                    </mat-form-field>
+
+                    <div>Interest rate:</div>
+                    <mat-form-field fxFlex appearance="fill">
+                        <!-- <mat-label>4.5</mat-label> -->
+                        <input matInput required type="text" name="interestRate" formControlName="interestRate" placeholder="4.5" />
+                        <mat-hint align="end" *ngIf="form.interestRate.touched && !form.interestRate.valid">
+                            Must provide a value for the interest rate.
+                        </mat-hint>
+                    </mat-form-field>
+
+                    <div>Number of years:</div>
+                    <mat-form-field fxFlex appearance="fill">
+                        <input matInput required type="text" name="numberOfYears" formControlName="numberOfYears" placeholder="8" />
+                        <mat-hint align="end" *ngIf="form.numberOfYears.touched && !form.numberOfYears.valid">
+                            Must provide a value for the number of years.
+                        </mat-hint>
+                    </mat-form-field>
+
+                    <br />
+                    <button mat-raised-button type="submit" [disabled]="!loanForm.touched || !loanForm.valid" color="primary">Submit</button>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div fxFlex class="loan-summary">
+        <mat-card class="mat-elevation-z0">
+            <mat-card-content class="align-center">
+                <div>Your monthly payment:</div>
+                <div>{{ monthlyPayment | currency }}</div>
+                <br />
+
+                <div>Interest paid:</div>
+                <div>{{ (monthlyPayment * numberOfPayments - principle) | currency }}</div>
+            </mat-card-content>
+        </mat-card>
+    </div>
 </div>
